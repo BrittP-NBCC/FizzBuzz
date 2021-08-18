@@ -23,36 +23,74 @@
    
     <!--Navbar-->
     <nav class="navbar navbar-expand-md pt-4 pb-3 fixed-top navbar-dark">
-    <div class="container-fluid">
-        <!--Logo-->
-        <a class="navbar-brand" href="index.html" title="FizzBuzz">
-            <img src="/img/fizzbuzz-logo-small.png" width="100" alt="Logo" class=" hover d-inline ms-3">
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
-            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link nav-active" href="#">App</a></li>
-                <li class="nav-item"><a class="nav-link" href="code.html">Code</a></li>
-            </ul>
+        <div class="container-fluid">
+            <!--Logo-->
+            <a class="navbar-brand" href="index.html" title="FizzBuzz">
+                <img src="/img/fizzbuzz-logo-small.png" width="100" alt="Logo" class=" hover d-inline ms-3">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link nav-active" href="#">App</a></li>
+                    <li class="nav-item"><a class="nav-link" href="code.html">Code</a></li>
+                </ul>
 
-            <ul class="navbar-nav ms-auto mb-2 mb-md-0">
-                <li class="nav-item">
-                    <a class="btn btn-portfolio green-text me-4" href="https://brittanyj-portfolio.netlify.app/" target="_blank">Portfolio</a>
-                </li>
-            </ul>
+                <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+                    <li class="nav-item">
+                        <a class="btn btn-portfolio green-text me-4" href="https://brittanyj-portfolio.netlify.app/" target="_blank">Portfolio</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
     </nav>
 
     <!--Main-->
     <main class="flex-shrink-0 mt-5">
-       <div class="container">
-            
-       </div>
+        <div class="container">
+            <div class="row row-cols-1 row-cols-lg-2">
+                <div class="col col-lg-4 side-border">
+                <h2 class="display-5 fw-bold lh-1 mb-3">FizzBuzz: A Coding Challenge</h2>
+                <h4 class="lead">When it counts, you Fizz Buzz. A Javascript coding exercise
+                    using loops. Write a program that prints the numbers from 1 to 100.
+                    For each multiple of 3 display <strong>"Fizz"</strong> instead of the number and
+                    for each multiple of 5 display <strong>"Buzz"</strong>.
+                    If a multiple of both, display <strong>"FizzBuzz"</strong>.
+                </h4>
+                <h2 class="mt-5 border-bottom border-2">Instructions</h2>
+                <p>Enter a Fizz and a Buzz value. Press the button and the values will appear.</p>
+                </div>
+                <div class="col col-lg-8">
+                    <div>
+                        <h5>Enter Values</h5>
+                        <form class="row gy-2 gx-3">
+                            <div class="col">
+                                <input id="fizzValue" type="number" class="form-control" aria-label="Fizz Value" 
+                                placeholder="Fizz Value" value="3">
+                            </div>
+                            <div class="col">
+                                <input id="buzzValue" type="number" class="form-control" aria-label="Buzz Value" 
+                                placeholder="Buzz Value" value="5">
+                            </div>
+                            <div class="col-12">
+                                <button id="btnSubmit" type="button" class="btn mt-2">Buzz It</button>
+                            </div>
+                        </form>
+                        <h2 class="mt-5 border-bottom border-2">Results</h2>
+                        <div class="table-responsive">
+                            <table class="table  table-sm">
+                                <tbody id="results">
+                                    <!--Results Go Here-->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
     <!--Footer-->
@@ -119,6 +157,17 @@
         </div>
     </footer>
 
+    <!--does not show on page-->
+    <template id="fbTemplate">
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </template>
+
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
         integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
@@ -127,6 +176,9 @@
         integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
     </script>
     <script src="js/main.js"></script>
+    <script>
+        document.getElementById("btnSubmit").addEventListener("click", getValues);
+    </script>
 </body>
 
 </html>
