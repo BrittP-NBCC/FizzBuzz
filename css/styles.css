@@ -3,17 +3,17 @@
 
 
 :root {
-    --dark-navy: #140d02;
-    --navy: #0a192f;
-    --light-navy: #112240;
-    --lightest-navy: #544023;
-    --navy-shadow: rgba(53, 45, 43, 0.753);
-    --dark-slate: #706449;
-    --slate: #b0a388;
-    --light-slate: #d1c3a8;
-    --lightest-slate: #cac5b9;
-    --white: #fff7e6;
-    --green: #ffb000;
+    --dark-navy: #020814;
+    --navy: #0a242f;
+    --light-navy: #113740;
+    --lightest-navy: #234854;
+    --navy-shadow: rgba(43, 49, 53, 0.753);
+    --dark-slate: #496870;
+    --slate: #88abb0;
+    --light-slate: #a8c9d1;
+    --lightest-slate: #b9c7ca;
+    --white: #e6faff;
+    --green: #6da8da;
 
     --font-mono: 'PT Mono';
     --font-sans: "Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
@@ -102,7 +102,7 @@ nav {
 
 .btn:hover {
   color: var(--green);
-  background-color:rgba(187, 151, 75, 0.123);
+  background-color:rgba(75, 133, 187, 0.123);
   border-color: var(--green);
 }
 
@@ -159,7 +159,7 @@ a:hover {
 
 .icon {
   font-size: 1.3em; 
-  color: #b0a388;
+  color: #88a7b0;
 }
 
   .test {
