@@ -6,8 +6,8 @@
     --dark-navy: #020814;
     --navy: #0a242f;
     --light-navy: #113740;
-    --lightest-navy: #234854;
-    --navy-shadow: rgba(43, 49, 53, 0.753);
+    --lightest-navy: #233754;
+    --navy-shadow: rgba(32, 40, 44, 0.753);
     --dark-slate: #496870;
     --slate: #88abb0;
     --light-slate: #a8c9d1;
@@ -190,8 +190,18 @@ a:hover {
     background-color: var(--navy-shadow);
   }
 
-  .even {
-    font-weight: 800;
+  .Fizz {
+    color: rgb(209, 52, 157);
+   
+  }
+
+  .Buzz {
+    color:  var(--white); 
+  }
+
+  .FizzBuzz {
+    color:rgb(15, 192, 192);
+    font-weight: 700;
   }
 
   /* Footer */
